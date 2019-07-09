@@ -2,7 +2,7 @@
 Version=0.5.0-82
 
 [R]
-Version=3.5.1
+Version=3.6.0
 Repositories=
 	CRAN=https://cloud.r-project.org
 
@@ -773,9 +773,9 @@ Hash=66c1a6de7f98266b76503698f2ca111d
 
 [R/Package/tidytext]
 Package=tidytext
-Version=0.2.0
+Version=0.2.1
 Source=CRAN
-Hash=c62694062831758c54b4da371b4a83a5
+Hash=4b4bd7a6e8ac3fd876f74c2e47991224
 
 [R/Package/tokenizers]
 Package=tokenizers

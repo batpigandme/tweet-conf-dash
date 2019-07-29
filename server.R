@@ -7,6 +7,8 @@
 # tweets <- function() .tweets_all %>% filter(is_topic)
 
 function(session, input, output) {
+  #-- Add conflicted preference --
+  conflicted::conflict_prefer("box", "shinydashboard")
   # ---- Demo Modal ----
   if (exists("DEMO") && !is.null(DEMO$relive_date)) {
     showModal(
@@ -185,7 +187,7 @@ function(session, input, output) {
         } else .
       }%>%
       config(displayModeBar = FALSE) %>%
-      layout(
+      plotly::layout(
         xaxis = list(
           range = c(now(tz_global()) - days(7), now(tz_global())),
           rangeselector = list(
@@ -228,7 +230,7 @@ function(session, input, output) {
       plot_ly(x = ~hour) %>%
       add_bars(y = ~topic, name = TOPIC$name, color = I(ADMINLTE_COLORS$teal)) %>%
       config(displayModeBar = FALSE) %>%
-      layout(
+      plotly::layout(
         yaxis = list(title = "Tweets"),
         xaxis = list(title = glue::glue("Hour of the Day ({TZ_GLOBAL})")),
         hovermode = "compare" # thanks: https://stackoverflow.com/a/46733461/2022615

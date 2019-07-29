@@ -16,7 +16,7 @@ schedule <-
   mutate_at(vars(session), as.integer) %>%
   gather(track, description, interop:shiny, na.rm = TRUE) %>%
   mutate(
-    day = if_else(session < 4, ymd("2019-01-17"), ymd("2019-01-18")),
+    # day = if_else(session < 4, ymd("2019-01-17"), ymd("2019-01-18")),
     day = wday(day, label = TRUE, abbr = FALSE),
     start_time = hms::hms(days = start_time),
     stop_time = hms::hms(days = stop_time)

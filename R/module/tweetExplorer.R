@@ -6,7 +6,7 @@ tweetExplorerUI <- function(id, tweet_div_id = "tweetExplorer-tweet", collapsed 
       column(
         12,
         class = "col-md-push-9 col-md-3",
-        box(
+        shinydashboard::box(
           width = "6 col-md-12",
           status = status,
           solidHeader = TRUE,
@@ -32,7 +32,7 @@ tweetExplorerUI <- function(id, tweet_div_id = "tweetExplorer-tweet", collapsed 
           uiOutput(ns("tweet"))
         )
       ),
-      box(
+      shinydashboard::box(
         width = "12 col-md-pull-3 col-md-9",
         status = "primary",
         DT::dataTableOutput(ns('tweets')))

@@ -1,9 +1,9 @@
 # ---- Metadata ----
 META <- list(
   # Name of the app, used in the browser/tab title
-  name        = "rstudio::conf(\'tweets\')",
+  name        = "JSM2019(\'tweets\')",
   # A description of the app, used in social media cards
-  description = "A Shiny Dashboard, rstudio::conf #FOMO reducer, tweet explorer by @grrrck",
+  description = "A Shiny Dashboard, JSM #FOMO reducer, tweet explorer by @grrrck",
   # Link to the app, used in social media cards
   app_url     = "https://apps.garrickadenbuie.com/rstudioconf-2019/",
   # Link to app icon image, used in social media cards
@@ -38,15 +38,15 @@ META <- list(
 # gathering.
 TOPIC <- list(
   # Name of the conference or topic, for use in descriptive text
-  name             = "rstudio::conf",
+  name             = "JSM 2019",
   # Name of the full Twitter community, for use in descriptive text
-  full_community   = "#rstats",
+  full_community   = "#JSM2019",
   # Terms related to the topic that must be included in topical tweet text
-  terms            = c("rstudioconf", "rstudio conf", "rstudio::conf", "rstudiconf", "rstduioconf"),
+  terms            = c("JSM2019", "JSM19", "JSM"),
   # Hashtags to exclude from the Top 10 Hashtags list (because they're implied by the topic)
-  hashtag_exclude  = "rstudio?conf|rstduioconf|rstats|rstudio conf",
+  hashtag_exclude  = "jsm2019",
   # Words to exclude from the Top 10 Words list (because they're implied by the topic)
-  wordlist_exclude = "rstudio|conf|rstats"
+  wordlist_exclude = "jsm"
 )
 
 # ----- Tweets With Most XX Time Window ----
@@ -82,8 +82,8 @@ TWEET_WALL_DATE_INPUTS <- c(
 )
 
 # Conference-related dates, used only for the rest of this section
-.workshop_start   <- ymd("2019-01-15", tz = tz_global())
-.conference_start <- ymd("2019-01-17", tz = tz_global())
+.workshop_start   <- ymd("2019-07-27", tz = tz_global())
+.conference_start <- ymd("2019-07-27", tz = tz_global())
 
 # Only show "Since Workshop" button _after_ workshops have started
 if (today_tz() > .workshop_start) {
@@ -182,7 +182,7 @@ BLOCKLIST <- list(
 
 # Demo Settings -----------------------------------------------------------
 DEMO <- list(
-  relive_date = ymd("2019-01-18", tz = tz_global())
+  relive_date = ymd("2019-08-01", tz = tz_global())
 )
 
 if (exists("DEMO") && !is.null(DEMO$relive_date)) {
